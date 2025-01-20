@@ -1,16 +1,29 @@
 public class Main {
     public static void main(String[] args) {
         Integer input=12345;
-        String value=input.toString();
-        int div=0;
-        for(int i=1;i<=value.length();i++) {
+
+        while(input > 0) {
             System.out.println(input % 10);
             input= input/10;
         }
+
         System.out.println("------------------------------------------");
-        for(int i=0;i<=value.length()-1;i++) {
-            System.out.println(value.charAt(i));
+
+        int num = 12345;
+        int reverse = 0;
+
+        // Reverse the number
+        while (num > 0) {
+            reverse = reverse * 10 + num % 10; // Add the last digit to the reversed number
+            num /= 10; // Remove the last digit
         }
+
+        // Print the digits of the reversed number
+        while (reverse > 0) {
+            System.out.println(reverse % 10); // Print the last digit
+            reverse /= 10; // Remove the last digit
+        }
+
         System.out.println("------------------------------------------");
 
         int count = 1;
